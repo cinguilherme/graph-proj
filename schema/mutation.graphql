@@ -1,0 +1,23 @@
+#import User, Profile from 'user.graphql'
+
+type Mutation {
+  newUser(data: UserInput!): User!
+
+  deleteUser(filter: UserFilter!): User
+
+  alterUser(
+    filter: UserFilter!
+    input: UserInput!
+  ): User
+
+  newProfile(
+    data: ProfileInput
+  ): Profile
+  
+  alterProfile(
+    filter: ProfileFilter
+    data: ProfileInput
+  ): Profile
+
+  deleteProfile(filter: ProfileFilter): Profile
+}
